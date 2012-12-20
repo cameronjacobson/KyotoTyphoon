@@ -1,4 +1,7 @@
-KyotoTyphoon
-============
+# KyotoTyphoon
 
-PHP client for KyotoTycoon database
+Very early stage of a PHP client for KyotoTycoon
+
+## see examples in:
+
+examples/*
