@@ -29,15 +29,12 @@ class KyotoClient
 		$this->protocol = @strtolower($options['protocol']) ?: 'rest';
 		switch($this->protocol){
 			case 'binary':
-				$this->transport = new KyotoBinaryTransport($options);
 				$this->client = new KyotoBinaryClient($options);
 				break;
 			case 'rpc':
-				$this->transport = new KyotoRpcTransport($options);
 				$this->client = new KyotoRpcClient($options);
 				break;
 			default:
-				$this->transport = new KyotoRestTransport($options);
 				$this->client = new KyotoRestClient($options);
 				break;
 		}
@@ -59,4 +56,15 @@ class KyotoClient
 		}
 	}
 
+	public function __call($name,$args){
+		$this->client->$name($args);
+	}
+
+	public function __get($name){
+		return $this->client->$name;
+	}
+
+	public function __set($name,$value){
+		$this->client->$name = $value;
+	}
 }

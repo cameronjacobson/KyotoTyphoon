@@ -2,8 +2,11 @@
 
 namespace KyotoTyphoon;
 
-use \Evenement\EventEmitter;
+use \Phixd\Phixd;
 
-class KyotoEvent extends EventEmitter
+class KyotoEvent extends Phixd
 {
+	public function __construct(){
+		parent::__construct();
+	}
 }

@@ -5,6 +5,9 @@ namespace KyotoTyphoon\Transport;
 use KyotoTyphoon\KyotoTransport;
 use KyotoTyphoon\Interfaces\KyotoTransportInterface;
 
+use KyotoTyphoon\KyotoRequest as Request;
+use KyotoTyphoon\KyotoResponse as Response;
+
 class KyotoRpcTransport extends KyotoTransport implements KyotoTransportInterface
 {
 	private $defaultEncoding = 'B';
@@ -31,5 +34,9 @@ class KyotoRpcTransport extends KyotoTransport implements KyotoTransportInterfac
 		if(in_array($contentType,$this->validContentTypes)){
 			$this->defaultContentType = strtolower($contentType);
 		}
+	}
+
+	public function send(Request $request, Response $response){
+		
 	}
 }
