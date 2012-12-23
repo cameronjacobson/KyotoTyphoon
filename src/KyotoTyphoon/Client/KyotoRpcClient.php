@@ -41,227 +41,264 @@ class KyotoRpcClient implements KyotoClientInterface
 
 	public function void(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function _echo(Array $params=[],Array $callbacks=[]){
 		return $this->send('echo', [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function report(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function play_script(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function tune_replication(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function status(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function clear(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function synchronize(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function set(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function add(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function replace(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function append(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function increment(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function increment_double(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cas(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function remove(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function get(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function check(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function seize(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function set_bulk(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function remove_bulk(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function get_bulk(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function vacuum(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function match_prefix(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function match_regex(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function match_similar(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_jump(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_jump_back(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_step(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_step_back(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_set_value(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_remove(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_get_key(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_get_value(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_get(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_seize(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
 	public function cur_delete(Array $params=[],Array $callbacks=[]){
 		return $this->send(__FUNCTION__, [
-			'params'=>$params
-		],$callbacks);
+			'params'=>$params,
+			'callbacks'=>$callbacks
+		]);
 	}
 
-	private function send($command,Array $params,Array $callbacks=[]){
+	private function send($command,Array $params){
 
 		$requestHash = spl_object_hash($request = new Request());
 		$responseHash = spl_object_hash($response = new Response());
@@ -269,7 +306,7 @@ class KyotoRpcClient implements KyotoClientInterface
 		$request->command = $command;
 		$request->params = $params['params'];
 
-		foreach($callbacks as $event=>$callback){
+		foreach($params['callbacks'] as $event=>$callback){
 			if(is_callable($callback)){
 				KyotoEvent::once($event,$callback);
 			}

@@ -20,37 +20,44 @@ class KyotoRestClient implements KyotoClientInterface
 
     public function GET(Array $params=[],Array $callbacks=[]){
         return $this->send(__FUNCTION__, [
-			'params'=>[]
+			'params'=>$params,
+			'callbacks'=>$callbacks
         ],$callbacks);
     }
 
     public function HEAD(Array $params=[],Array $callbacks=[]){
         return $this->send(__FUNCTION__, [
-			'params'=>[]
+			'params'=>$params,
+			'callbacks'=>$callbacks
         ],$callbacks);
     }
 
     public function PUT(Array $params=[],Array $callbacks=[]){
         return $this->send(__FUNCTION__, [
-			'params'=>[]
+			'params'=>$params,
+			'callbacks'=>$callbacks
         ],$callbacks);
     }
 
     public function DELETE(Array $params=[],Array $callbacks=[]){
         return $this->send(__FUNCTION__, [
-			'params'=>[]
+			'params'=>$params,
+			'callbacks'=>$callbacks
         ],$callbacks);
     }
 
-    private function send($command,Array $options,Array $callbacks=[]){
+    private function send($command,Array $params){
 
         $requestHash = spl_object_hash($request = new Request());
         $responseHash = spl_object_hash($response = new Response());
 
         $request->command = $command;
-        $request->options = $options;
 
-        foreach($callbacks as $event=>$callback){
+		foreach($params['params'] as $k=>$v){
+			$request->params[$k]=$v;
+		}
+
+        foreach($params['callbacks'] as $event=>$callback){
             if(is_callable($callback)){
                 KyotoEvent::once($event,$callback);
             }

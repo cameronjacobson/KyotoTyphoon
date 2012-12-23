@@ -51,18 +51,6 @@ class KyotoRpcTransport extends KyotoTransport implements KyotoTransportInterfac
 		return 'Content-Length: '.(strlen($reqBody)+1)."\r\n";
 	}
 
-	private function generateBody(Request $request){
-		$body = array();
-		foreach((array)@$request->params[0] as $k=>$v){
-			switch($this->defaultContentType){
-				case 'text/tab-separated-values':
-					$body[] = $this->encodeData($k).(!is_null($v) ? "\t".$this->encodeData($v) : '');
-					break;
-			}
-		}
-		return implode("\n",$body);
-	}
-
 	private function parseHeaders(Response $response){
 		
 	}
@@ -95,6 +83,18 @@ class KyotoRpcTransport extends KyotoTransport implements KyotoTransportInterfac
 	}
 
 	public function close(){
+	}
+
+	private function generateBody(Request $request){
+		$body = array();
+		foreach((array)@$request->params[0] as $k=>$v){
+			switch($this->defaultContentType){
+				case 'text/tab-separated-values':
+					$body[] = $this->encodeData($k).(!is_null($v) ? "\t".$this->encodeData($v) : '');
+					break;
+			}
+		}
+		return implode("\n",$body);
 	}
 
 	public function send(Request $request, Response $response){
