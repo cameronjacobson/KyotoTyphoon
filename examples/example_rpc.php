@@ -14,15 +14,6 @@ echo $rpcClient->set([
 	'value'=>'value',
 	'xt'=>6
 ]);
-echo $rpcClient->cur_jump([
-	'CUR'=>'8',
+echo $rpcClient->get([
+	'key'=>'blah'
 ]);
-
-echo $rpcClient->cur_get_key([
-	'CUR'=>'8',
-]);
-
-echo $rpcClient->cur_get_value([
-	'CUR'=>'8'
-]);
-
