@@ -15,7 +15,6 @@ class KyotoTransport
 	public function setScheme($scheme){
 		$this->scheme = $scheme;
 		if($this->conn){
-echo 'scheme';
 			$this->setConnection();
 		}
 	}
@@ -23,7 +22,6 @@ echo 'scheme';
 	public function setHost($host){
 		$this->host = $host;
 		if($this->conn){
-echo 'host';
 			$this->setConnection();
 		}
 	}
@@ -31,7 +29,6 @@ echo 'host';
 	public function setPort($port){
 		$this->port = $port;
 		if($this->conn){
-echo 'port';
 			$this->setConnection();
 		}
 	}
