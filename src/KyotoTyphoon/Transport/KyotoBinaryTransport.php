@@ -15,7 +15,5 @@ class KyotoBinaryTransport extends KyotoTransport implements KyotoTransportInter
 	}
 
     public function send(Request $request, Response $response){
-        var_dump($request);
-        var_dump($response);
     }
 }
