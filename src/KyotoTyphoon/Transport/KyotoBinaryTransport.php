@@ -10,11 +10,12 @@ use KyotoTyphoon\KyotoResponse as Response;
 
 class KyotoBinaryTransport extends KyotoTransport implements KyotoTransportInterface
 {
-	public function __construct(Array $options){
+	public function __construct(Array $options = []){
         parent::__construct($options);
 	}
 
-	public function send(Request $request, Response $response){
-		
-	}
+    public function send(Request $request, Response $response){
+        var_dump($request);
+        var_dump($response);
+    }
 }

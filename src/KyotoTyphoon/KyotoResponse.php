@@ -6,7 +6,7 @@ use KyotoTyphoon\KyotoEvent;
 
 class KyotoResponse
 {
-	public function __construct(){
+	public function __construct(Array $params = []){
 		
 	}
 }

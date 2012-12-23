@@ -8,7 +8,7 @@ class KyotoRequest
 {
 	public $requestid;
 
-	public function __construct(Array $params){
+	public function __construct(Array $params = []){
 		$this->requestid = spl_object_hash($this);
 	}
 }
