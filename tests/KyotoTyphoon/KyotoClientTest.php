@@ -37,7 +37,7 @@ class KyotoClientTest extends \PHPUnit_Framework_TestCase
 	public function testBinaryProtocol(){
 		$this->BinaryClient = $this->getClient('binary');
 
-		$prop = new \ReflectionProperty('\KyotoTyphoon\KyotoClient','transport');
+		$prop = new \ReflectionProperty('\KyotoTyphoon\Client\KyotoBinaryClient','transport');
 		$prop->setAccessible(true);
 		$binaryTransport = $prop->getValue($this->BinaryClient);
 		$this->assertTrue($binaryTransport instanceof \KyotoTyphoon\Transport\KyotoBinaryTransport);
@@ -54,7 +54,7 @@ class KyotoClientTest extends \PHPUnit_Framework_TestCase
 	public function testRestProtocol(){
 		$this->RestClient = $this->getClient('rest');
 
-		$prop = new \ReflectionProperty('\KyotoTyphoon\KyotoClient','transport');
+		$prop = new \ReflectionProperty('\KyotoTyphoon\Client\KyotoRestClient','transport');
 		$prop->setAccessible(true);
 		$restTransport = $prop->getValue($this->RestClient);
 		$this->assertTrue($restTransport instanceof \KyotoTyphoon\Transport\KyotoRestTransport);
@@ -71,7 +71,7 @@ class KyotoClientTest extends \PHPUnit_Framework_TestCase
 	public function testRpcProtocol(){
 		$this->RpcClient = $this->getClient('rpc');
 
-		$prop = new \ReflectionProperty('\KyotoTyphoon\KyotoClient','transport');
+		$prop = new \ReflectionProperty('\KyotoTyphoon\Client\KyotoRpcClient','transport');
 		$prop->setAccessible(true);
 		$rpcTransport = $prop->getValue($this->RpcClient);
 		$this->assertTrue($rpcTransport instanceof \KyotoTyphoon\Transport\KyotoRpcTransport);

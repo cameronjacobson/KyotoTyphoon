@@ -14,22 +14,13 @@ class KyotoTransport
 
 	public function setScheme($scheme){
 		$this->scheme = $scheme;
-		if($this->conn){
-			$this->setConnection();
-		}
 	}
 
 	public function setHost($host){
 		$this->host = $host;
-		if($this->conn){
-			$this->setConnection();
-		}
 	}
 
 	public function setPort($port){
 		$this->port = $port;
-		if($this->conn){
-			$this->setConnection();
-		}
 	}
 }
